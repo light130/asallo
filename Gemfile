@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
+gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'html2slim'
 gem 'jbuilder', '~> 2.7'
@@ -14,9 +15,6 @@ gem 'turbolinks', '~> 5'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
-
-
-# gem 'bcrypt', '~> 3.1.7'
 
 # gem 'image_processing', '~> 1.2'
 
