@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
@@ -7,6 +10,6 @@ Rails.application.routes.draw do
   end
   root to: 'tasks#index'
   resources :tasks do
-    post :confirm, action: :confirm_new, on: :new
+    post :import, on: :collection
   end
 end
