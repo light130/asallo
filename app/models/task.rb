@@ -1,11 +1,13 @@
 class Task < ApplicationRecord
-  has_one_attached :image
-
-  validates :name, presence: true, length: { maximum: 30 }
-
   belongs_to :user
 
+  has_one_attached :image
+
+  paginates_per 50
+
   scope :recent, -> { order(created_at: :desc) }
+
+  validates :name, presence: true, length: { maximum: 30 }
 
   def self.csv_attributes
     ["name", "description", "created_at", "updated_at"]
