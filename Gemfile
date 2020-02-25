@@ -15,7 +15,6 @@ gem 'rails_autolink'
 gem 'ransack'
 gem 'sidekiq', '~> 5.0'
 gem 'slim-rails'
-gem 'turbolinks', '~> 5'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
